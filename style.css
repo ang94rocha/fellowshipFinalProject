@@ -7,6 +7,24 @@ html, body{
   color: #222;
 }
 
+h1 {
+  color: #F0881C;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color:white;
+  outline-color: white;
+}
+
+h6 {
+  color: #0085C4;
+}
+
+
 .navbar {
   padding: .8rem;
 } 
@@ -42,7 +60,7 @@ html, body{
 .carousel-caption h1 {
   font-size: 500%;
   text-transform: uppercase;
-  text-shadow: 1px 1px 15px #F0881C;
+  text-shadow: 1px 1px 15px #000;
 }
 
 .carousel-caption h3 {
