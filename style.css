@@ -9,7 +9,6 @@ html, body{
 
 .navbar {
   padding: .8rem;
-  background-color: #0000000;
 } 
 
 .navbar-nav li{
@@ -43,7 +42,7 @@ html, body{
 .carousel-caption h1 {
   font-size: 500%;
   text-transform: uppercase;
-  text-shadow: 1px 1px 15px #000;
+  text-shadow: 1px 1px 15px #F0881C;
 }
 
 .carousel-caption h3 {
@@ -54,13 +53,13 @@ html, body{
 }
 
 .btn-primary {
-  background-color: #012169;
-  border: 1px solid #563d7c;
+  background-color: #0085C4;
+  border: 1px solid #0676C1;
 }
 
 .btn-primary:hover {
-  background-color: #563d7c;
-  border: 1px solid #563d7c;
+  background-color: #0676C1;
+  border: 1px solid #0085C4;
 }
 
 .jumbotron {
