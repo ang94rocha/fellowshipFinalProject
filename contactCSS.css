@@ -8,11 +8,11 @@
 }
 
 body {
-  background-color: #6a9ac4;
+  background-color: rgb(15, 29, 47);;
 }
 
 #contact {
-  background-color: #6a9ac4;
+  background-color: rgb(15, 29, 47);;
   display: flex;
   justify-content: center;
   align-items: center;
