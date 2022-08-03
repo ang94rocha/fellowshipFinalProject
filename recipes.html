@@ -1,44 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="recipeCSS.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+  <link rel="stylesheet" href="recipeCSS.css">
 </head>
+
 <body>
-    <script src="logJS.js"></script>
-    
-<main class="page-content">
-    <div class="card">
-      <div class="content">
-        <h2 class="title">Mountain View</h2>
-        <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-        <button class="btn">View Trips</button>
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="DnB.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span style="color:white;" class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recipes.html">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#membership">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ourStory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Connect</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="card">
-      <div class="content">
-        <h2 class="title">To The Beach</h2>
-        <p class="copy">Plan your next beach trip with these fabulous destinations</p>
-        <button class="btn">View Trips</button>
-      </div>
+  </nav>
+  <div class="container">
+    <div class="cards">
+
+      <a class="card" href="#">
+        <span class="card-header" style="background-image: url(http://placeimg.com/640/480/nature);">
+        </span>
+        <span class="card-summary">
+          Each card is created from an &lt;a&gt; tag so the whole card is linked.
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+
+
+      <a class="card" href="https://www.foodista.com/recipe/PLXPL3WQ/pad-se-ew-tofu-with-vegetable-noodles">
+        <span class="card-header" style="background-image: url(tofuBroccoli.png);">
+        </span>
+        <span class="card-summary">
+         Tasty Tofu with Broccoli. Click for Recipe.!
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+      <a class="card" href="https://www.foodista.com/recipe/JYWSRGLY/lemon-pepper-fettucine-alfredo">
+        <span class="card-header" style="background-image: url(salmonAlfredo.png);">
+        </span>
+        <span class="card-summary">
+          Savory Alfredo Pasta. Click for Recipe!
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+
+      <a class="card" href="https://www.foodista.com/recipe/ZVXPQHB5/blue-cheese-burgers">
+        <span class="card-header" style="background-image: url(background1.png);">
+        </span>
+        <span class="card-summary">
+          Juicy Black Bean Burger. Click for Recipe!
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+
+
+      <a class="card" href="https://www.foodista.com/recipe/K5ZFLKXR/mozzarella-pesto-salad">
+        <span class="card-header" style="background-image: url(background2.png);">
+        </span>
+        <span class="card-summary">
+          Healthy salad meal. Click for Recipe!
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+      <a class="card" href="http://www.foodista.com/recipe/F4D23G25/flank-steak-with-mushroom-sauce">
+        <span class="card-header" style="background-image: url(background3.png);">
+        </span>
+        <span class="card-summary">
+          Tasty Steak with Sides. Click for Recipe!
+        </span>
+        <span class="card-meta">
+          Published: Aug 3rd, 2022
+        </span>
+      </a>
+
+     
     </div>
-    <div class="card">
-      <div class="content">
-        <h2 class="title">Desert Destinations</h2>
-        <p class="copy">It's the desert you've always dreamed of</p>
-        <button class="btn">Book Now</button>
-      </div>
+  </div>
+  <div class="btn-class">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <input id="search"><button onclick="getrecipe(document.getElementById('search').value)">Search</button>
+    <div class="food-img" id="output">
     </div>
-    <div class="card">
-      <div class="content">
-        <h2 class="title">Explore The Galaxy</h2>
-        <p class="copy">Seriously, straight up, just blast off into outer space today</p>
-        <button class="btn">Book Now</button>
-      </div>
-    </div>
+    <a href="" id="sourceLink"></a>
+  </div>
+  <script>
+    function getSource(id) {
+      $.ajax({
+        url: "https://api.spoonacular.com/recipes/" + id + "/information?apiKey=f1e835eab08344589b3e5d2fa13b678c",
+        success: function (res) {
+          document.getElementById("sourceLink").innerHTML = res.sourceUrl
+          document.getElementById("sourceLink").href = res.sourceUrl
+        }
+      });
+    }
+    function getrecipe(q) {
+      $.ajax({
+        url: "https://api.spoonacular.com/recipes/search?apiKey=f1e835eab08344589b3e5d2fa13b678c&number=1&query=" + q,
+        success: function (res) {
+          document.getElementById("output").innerHTML = "<h1>" + res.results[0].title + "</h1><br><img src ='" + res.baseUri + res.results[0].image + "'width='400'/><br> ready in " + res.results[0].readyInMinutes + " minutes"
+          getSource(res.results[0].id)
+        }
+      })
+    }
+  </script>
   </main>
 </body>
+
 </html>

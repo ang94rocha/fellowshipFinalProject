@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(15, 29, 47);;
+  background-color: rgb(15, 29, 47);
 }
 
 #contact {
@@ -202,4 +202,18 @@ textarea:valid+label {
     height: 38px;
   }
 }
+
+
+.navbar {
+  padding: .8rem;
+} 
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
 
